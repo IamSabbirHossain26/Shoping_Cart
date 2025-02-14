@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007bff;
+    color: white;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cart-icon {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Products Grid */
+#products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+/* Cart */
+#cart-container {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    background: white;
+    height: 100vh;
+    padding: 20px;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    display: none;
+}
+
+#cart-container h2 {
+    margin-top: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Buttons */
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+/* Ensure full height layout */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content should take full height */
+.main-content {
+    flex: 1;
+}
+
+/* Footer should stay at the bottom */
+footer {
+    background-color: #007bff;
+    color: white;
+    justify-items: center;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    position: relative; /* Keep it inside the page layout */
+    bottom: 0;
+}
